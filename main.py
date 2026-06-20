@@ -5,7 +5,7 @@ from openai import OpenAI
 from jinja2 import Template
 
 # ------------------------- USER CONFIG -------------------------
-API_KEY = os.environ.get("API_KEY", "sk-9b99bd87dd964c10b28ccef2cd10567d")
+API_KEY = os.environ.get("API_KEY", "key")
 BASE_URL =  "https://api.deepseek.com"
 # BASE_URL ="http://localhost:8000/v1"
 MODEL = "deepseek-v4-flash"
