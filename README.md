@@ -20,8 +20,8 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 ```
 0.05_Alan Water.html -- fabrication test
 0.05_Edward Van Halen.html -- absurdity test  
-0.75_Spidey (Yichi Zhang).html -- real candidate test
-0.85_Zero Fret.html -- real candidate test
+0.75_Spidey (Yichi Zhang).html -- real candidate test. https://github.com/spidey-zyc
+0.85_Zero Fret.html -- real candidate test. https://github.com/zero-fret/
 ```
 
 ## Manual
