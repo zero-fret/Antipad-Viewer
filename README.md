@@ -9,6 +9,7 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 - Mark experiences as: ✅ Substantive / 💧 Watered-Down / 🚩 Suspicious with analysis
 - Output confidence score (0–1)
 - Generate clean, table-based HTML reports
+- A determined fabricator must build a *time bomb that will explode in technical interview* to pass the software 
 
 ### Known Limitations:
 - Does NOT verify facts (e.g., grades, whether papers are actually published)
