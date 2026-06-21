@@ -1,4 +1,4 @@
-# 💧 Antipad Viewer - Resume Analysis Software
+# 💧 Antipad Viewer - CV Analysis Software
 Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences, generate technical interview questions and output HTML reports. 
 - Designed for admission officers and HR managers
 - **Enhance but DOES NOT REPLACE technical interview**
