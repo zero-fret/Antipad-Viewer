@@ -18,10 +18,10 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 
 ### Output Example:
 ```
-0.05_Alan Water.html -- fabrication test
-0.05_Edward Van Halen.html -- absurdity test  
-0.75_Spidey (Yichi Zhang).html -- real candidate test. https://github.com/spidey-zyc
-0.85_Zero Fret.html -- real candidate test. https://github.com/zero-fret/
+0.05_Alan Water.html -- inflated CV with fabricated claims
+0.05_Edward Van Halen.html -- absurdity test, guitarist applying to CS  
+0.75_Spidey (Yichi Zhang).html -- real candidate's CV. https://github.com/spidey-zyc
+0.85_Zero Fret.html -- real candidate's CV. https://github.com/zero-fret/
 ```
 
 ## Manual
