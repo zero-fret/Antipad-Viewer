@@ -112,6 +112,9 @@ Do NOT assign 🌐 if project is purely within one field. Relevance is separate 
 Deliverying an 1-domain module for large cross-disciplinary project is still 1-domain. 
 (e.g computer vision module for robotic = still pure computer vision)
 
+## Timeline
+Check inconsistency ONLY WITHIN the timeline INSIDE the text. Ignore your current time or date.
+
 ## MAJOR MISMATCH RULE:
 If major ≠ inferred target → set gpa.notApplicable = true AND populate majorMismatch.
 Otherwise majorMismatch.detected = false (omit note).
