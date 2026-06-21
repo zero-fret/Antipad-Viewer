@@ -1,0 +1,517 @@
+<!--
+THINKING BLOCK (auto-inserted by main.py):
+// API reasoning_content //
+We need to analyze the resume of Edward Van Halen (actually Eddie Van Halen). The target field is Computer Science, AI, Data Science based on the applying to section. This is a musician/guitarist. The education is classical piano training and self-taught guitarist. No formal CS education. GPA not applicable (major mismatch). Test scores none. We need to judge each experience.
+
+Let's list experiences:
+
+1. Lead Systems Architect & Principal Guitarist | Van Halen Inc. | 1974 - Present
+2. Hardware R&D Engineer | Self-Employed | 1975 - Present
+3. Recording Systems Engineer | 5150 Studios | 1980 - Present
+4. Product Development Consultant | Peavey Electronics | 1990s
+5. KEYBOARD SYSTEMS INTEGRATION (maybe not a separate experience but a project)
+6. Selected Projects: "Eruption", Frankenstrat, 5150 Amplifier Series
+7. Patents & IP
+8. Awards
+
+But the structure expects experiences array. We should list the main experiences as per the resume sections. Probably the sections under "EXPERIENCE" and "SELECTED PROJECTS" can be combined. However, the instructions say "experiences" array should list each experience. Let's extract all distinct ones.
+
+I'll treat each sub-section under EXPERIENCE as a separate experience, and also the projects as separate? But the projects are described under SELECTED PROJECTS. Maybe we can include them as experiences. However, the instructions want to analyze each experience. I'll include the main ones.
+
+Let's think about CORE JUDGMENT RULES.
+
+Presumption of Guilt: ANY reasonable doubt about contribution, clarity, fabrication or substance → give 💧 or 🚩.
+
+We are evaluating for CS/AI/Data Science. This resume is about music and guitar engineering. There is essentially no direct relevance to CS/AI unless we stretch signal processing, but the applicant is applying to CS/AI programs. The experiences are all in music performance and guitar hardware/electronics. The "technical skills" include signal processing terms but in audio context. No mention of programming, algorithms, machine learning, etc.
+
+Thus, most experiences will have low relevance to target field. However, classification (substantive/watered-down/suspicious) is independent of relevance. So we judge each experience on its own merits as a description of an achievement.
+
+But note: the resume is obviously from a famous musician. The claims are likely true (Van Halen did do these things). But we must judge based on the text provided. The text seems clear and substantive for a musician: it describes specific innovations, quantifiable results (102-second solo, patented devices). However, the relevance to CS/AI is minimal. 
+
+But there is a major mismatch: the applicant's background is music, not CS. The target field is CS/AI/Data Science. The resume contains no CS coursework, no programming projects, no data science experience. This is a classic case of major mismatch.
+
+Thus, the verdict will likely be "Background Noise" because the applicant has no demonstrated capability in the target field. However, the confidence may be low because the applicant might have some transferable skills? But no.
+
+Let's go through each experience.
+
+First, "Lead Systems Architect & Principal Guitarist" - This is a band leader role with technical guitar innovations. The work chain: cofounded band, served as primary songwriter, engineered "Eruption" solo, pioneered tapping technique, developed "brown sound", designed split-signal architecture. These are real contributions but not in CS. Classification: For a musician resume, these are substantive (✅). But for CS target, relevance is ❌ None (no CS methods). Innovation: ⚙️ Engineering (in the context of guitar). So I'd classify as ✅ Substantive but relevance ❌.
+
+But wait: the rules say "Presumption of Guilt" - we must consider if there is any doubt. The claims are well-known and likely true. However, the text is descriptive and uses active verbs. So ✅.
+
+Second, "Hardware R&D Engineer" - built Frankenstein guitar, installed pickups, prototyped Super Strat, patented support device and D Tuna. Again, substantive for a guitar builder, relevance ❌.
+
+Third, "Recording Systems Engineer" - engineered recording sessions, microphone configurations, signal splitting. Substantive, relevance ❌.
+
+Fourth, "Product Development Consultant" - co-designed Peavey 5150 amplifier. Substantive but relevance ❌.
+
+Fifth, "KEYBOARD SYSTEMS INTEGRATION" - introduced synthesizer into heavy metal, scored #1 single. Not really a separate experience but a note. Maybe include as an experience? It says "Introduced synthesizer into heavy metal; scored first #1 single "Jump"". That's a musical achievement, not CS. So again, substantive but relevance ❌.
+
+Selected Projects: "Eruption" - single-take solo, integrated tapping, etc. Could be considered as a performance system, but again no CS.
+
+Frankenstrat - custom hardware platform, first to feature Floyd Rose, displayed at Smithsonian. Substantive.
+
+5150 Amplifier Series - designed amplifier, industry standard. Substantive.
+
+Patents & IP - three patents. Auto-✅ as patents (Substantive). Relevance: patents are in musical instrument technology, not CS. So ❌.
+
+Awards & Recognition - Rock Hall of Fame, Rolling Stone ranking, Grammy, etc. These are music awards, not relevant to CS.
+
+Now, cross-disciplinary check: The experiences are in music/guitar engineering, which is not CS. Do they use CS methods? No. No mention of programming, software, data science, AI. The signal processing is in analog audio, not digital signal processing. So no cross-disciplinary.
+
+Thus, all experiences are substantive in their own domain but irrelevant to CS.
+
+Major mismatch: The applicant's major is classical piano training and self-taught guitarist. No CS major. So GPA not applicable, majorMismatch detected.
+
+Inflation warning: The resume is accurate for Eddie Van Halen's accomplishments. It is not inflated in the context of a musician. But for a CS application, the entire resume is inflated in the sense that it presents non-CS experience as if it were technical/engineering, but it's not deceptive. However, the instructions say: "Show when writing is inflated, vague, suspicious, or contains intentionally inflated information overall." Since the resume is accurate for its domain, I'd say no inflation warning in the sense of fabrication. But from a CS admissions perspective, it might be considered irrelevant, not inflated. So inflationWarning show false.
+
+Confidence score: For admission to competitive CS master's program, probability is extremely low because no CS background. So confidence should be very low, maybe 0.0-0.1. But we need to be systematic. The confidence score is "Estimated admission probability to competitive master's program in inferred target field." So with no CS courses, no programming projects, no evidence of CS aptitude, the probability is near zero. Let's set confidence 0.05.
+
+Verdict classification: "Potential Asset" or "Background Noise"? Clearly Background Noise.
+
+Strengths: The only strengths might be strong patents and innovative mindset, but for CS, they are not directly applicable. The instructions say strengths array can include items like "Course/Grade", "Award". Here, no courses. Awards are music awards, not relevant. So strengths will be empty or minimal. But we can note the patents and maybe the "Eruption" solo as a demonstration of creative engineering? But it's not CS. I'll put some generic strengths like "Proven innovator with multiple patents" but that may be too generous. Better to omit.
+
+Let's be strict.
+
+Now, for each experience in the JSON, we need to fill in methods, capabilities, workChain, assetTags, interviewQuestions.
+
+For experiences with relevance ❌, we can still describe the work chain but note it's not CS.
+
+I need to extract the text for each experience.
+
+Let's define the experiences array:
+
+Experience 1: "Lead Systems Architect & Principal Guitarist | Van Halen Inc. | 1974 - Present"
+Original text: "Cofounded hard rock band; served as primary songwriter for all major releases\n- Engineered "Eruption" solo in 1 minute 42 seconds, redefining electric guitar vocabulary and establishing new performance benchmark for the instrument\n- Pioneered two-handed finger-tapping technique, treating the guitar fretboard as a multi-touch input surface with 22 independent trigger points\n- Developed "brown sound" — a highly saturated overdriven timbre — through systematic amp modification and effects pedal array experimentation\n- Designed split-signal architecture: panned dry guitar signal to left channel, processed signal to right, creating immersive 3D audio field"
+
+Classification: ✅ Substantive (clear contributions, active verbs, quantifiable: 102 seconds)
+Relevance: ❌ None (no CS methods)
+Innovation: ⚙️ Engineering (guitar technique and equipment)
+Methods: none in CS domain; maybe "signal splitting", "amplifier modification"
+Capabilities: musical performance, guitar innovation
+WorkChain: Cofounded band → pioneered tapping technique → engineered Eruption solo → developed brown sound → designed split-signal architecture
+AssetTags: music, guitar, signal processing (analog)
+InterviewQuestions: Could ask about signal splitting architecture? But irrelevant to CS.
+
+Experience 2: "Hardware R&D Engineer | Self-Employed | 1975 - Present"
+Original: "- Designed and built "Frankenstein" guitar (1977) from factory-second parts; hybridized Fender Stratocaster playability with Gibson humbucker tonal characteristics\n- Installed PAF pickup salvaged from Gibson ES-335; potted in paraffin wax to reduce microphonic feedback\n- Prototyped first "Super Strat" guitar configuration, subsequently adopted as new industry standard\n- Patented support device facilitating finger tapping technique\n- Patented "D Tuna" device enabling rapid drop-tuning of lowest string by a whole step\n- Developed custom headstock design and stacked humbucking pickup configuration\n- Integrated Floyd Rose double-locking vibrato system for extreme pitch modulation"
+
+Classification: ✅ Substantive (patents, building physical objects)
+Relevance: ❌ None
+Innovation: ⚙️ Engineering / 🌟? Actually, innovation in guitar design is breakthrough for that field, but for CS it's not innovation. But within the experience itself, it's innovative. However, we classify innovation based on the nature of the work. The rules say innovation: 🌟 Breakthrough / ⚙️ Engineering / 📚 Classroom / 🛠️ Routine. This is engineering (designing and building). I'll say ⚙️ Engineering.
+Methods: not CS
+Capabilities: hardware design, patenting
+WorkChain: designed guitar from parts → integrated pickup → prototyped new configuration → patented devices
+AssetTags: guitar hardware, engineering
+InterviewQuestions: irrelevant
+
+Experience 3: "Recording Systems Engineer | 5150 Studios | 1980 - Present"
+Original: "- Engineered multi-track recording sessions without double-tracking guitars; each performance captured as single, nuanced take\n- Deployed dual Shure SM57 microphone configuration on single cabinet with variable signal delay\n- Implemented real-time signal splitting across multiple tube amplifiers and cabinets\n- Designed custom recording workflow prioritizing spontaneous performance over quantization"
+
+Classification: ✅ Substantive (specific recording techniques)
+Relevance: ❌ None
+Innovation: ⚙️ Engineering (audio engineering)
+Methods: microphone placement, signal splitting
+Capabilities: recording engineering
+WorkChain: Multi-track recording → single take → microphone setup → signal splitting → workflow design
+AssetTags: audio engineering
+InterviewQuestions: none
+
+Experience 4: "Product Development Consultant | Peavey Electronics | 1990s"
+Original: "- Co-designed Peavey 5150 signature guitar amplifier; created new tonal architecture for hard rock and metal"
+
+Classification: ✅ Substantive (co-designed product)
+Relevance: ❌ None
+Innovation: ⚙️ Engineering (amplifier design)
+Methods: analog circuit design
+Capabilities: product development
+WorkChain: co-designed amplifier with Peavey → developed tonal architecture
+AssetTags: amplifier design
+InterviewQuestions: none
+
+Experience 5: "KEYBOARD SYSTEMS INTEGRATION" (no title, but it's a section)
+Original: "- Introduced synthesizer into heavy metal; scored first #1 single "Jump" (1984) featuring keyboard melody"
+
+Classification: ✅ Substantive (introduced synth into metal, hit song)
+Relevance: ❌ None
+Innovation: 🌟 Breakthrough? Actually, it was innovative for heavy metal music. But again not CS. I'll say 🌟 Breakthrough in music context.
+Methods: none
+Capabilities: musical integration
+WorkChain: introduced synthesizer → produced #1 single
+AssetTags: music innovation
+InterviewQuestions: none
+
+Experience 6: "Eruption (1978) | Real-Time Performance System" under SELECTED PROJECTS
+Original: "- Single-take 102-second solo integrating tapping, tremolo dive-bombs, and harmonic overtones\n- Demonstrated feasibility of piano-style two-hand input on guitar interface\n- Recorded as spontaneous improvisation during album session; producer insisted on preservation"
+
+This is essentially a description of the "Eruption" solo. It might be considered redundant with experience 1. But we should include it as a separate experience if the resume lists it. To be thorough, we include it.
+
+Classification: ✅ Substantive (clear description, quantifiable time)
+Relevance: ❌ None
+Innovation: ⚙️ Engineering / 🌟 Breakthrough? For guitar playing, it was groundbreaking. But again not CS. I'll say 🌟 Breakthrough.
+Methods: tapping, tremolo
+Capabilities: guitar performance
+WorkChain: Improvisation → solo creation → recognized as benchmark
+AssetTags: guitar solo
+InterviewQuestions: none
+
+Experience 7: "Frankenstrat (1977) | Custom Hardware Platform" under SELECTED PROJECTS
+Original: "- Built from $130 ash body and maple neck; combined Strat scale length with Gibson humbucker output\n- First guitar to feature Floyd Rose tremolo system; became blueprint for modern Super Strat\n- Displayed at Smithsonian National Museum of American History"
+
+Classification: ✅ Substantive (specific build, historical significance)
+Relevance: ❌ None
+Innovation: 🌟 Breakthrough (first Super Strat)
+Methods: guitar building
+Capabilities: hardware design
+WorkChain: built from parts → pioneered tremolo integration → became industry standard
+AssetTags: guitar design
+InterviewQuestions: none
+
+Experience 8: "5150 Amplifier Series | Commercial Product" under SELECTED PROJECTS
+Original: "- Designed amplifier with extreme gain structure; became industry standard for hard rock\n- Second major tonal innovation following original "brown sound""
+
+Classification: ✅ Substantive (designed product, became standard)
+Relevance: ❌ None
+Innovation: ⚙️ Engineering (amplifier design)
+Methods: circuit design
+Capabilities: electronics design
+WorkChain: designed amplifier → achieved extreme gain → industry standard
+AssetTags: amplifier design
+InterviewQuestions: none
+
+Experience 9: "PATENTS & INTELLECTUAL PROPERTY" (list of three patents)
+Original: "- US Patent: Guitar support device for finger tapping facilitation\n- US Patent: "D Tuna" drop-tuning mechanism\n- US Patent: Stacked humbucking pickup and headstock design"
+
+These are patents. According to Auto-✅ regardless of detail, they are Substantive. But relevance ❌. Innovation: 🌟 Breakthrough? They are patented innovations. For guitar tech, they are novel. I'll say 🌟 Breakthrough.
+
+Classification: ✅ Substantive (patents)
+Relevance: ❌ None
+Innovation: 🌟 Breakthrough
+Methods: not CS
+Capabilities: invention, patenting
+WorkChain: invented devices → filed patents
+AssetTags: patent, guitar hardware
+InterviewQuestions: none
+
+Experience 10: "AWARDS & RECOGNITION" (list)
+- Rock and Roll Hall of Fame Inductee (2007)
+- Rolling Stone: #8 on 100 Greatest Guitarists of All Time (2011)
+- Guitar World Reader's Poll: #1 Greatest Guitarist of All Time (2012)
+- GRAMMY Award Winner (one win, three nominations)
+- National Guitar Museum Lifetime Achievement Award (2020, posthumous)
+- Billboard Music Awards Honoree (2020)
+- Metropolitan Museum of Art "Play It Loud" exhibit featured guitarist (2019)
+
+These are achievements but not experience contributions. We might include as a strength, not as an experience. The JSON structure expects experiences array. I think we can skip awards as a separate experience; they are more like strengths. But the resume has them as a section. I'll not include them as an experience to avoid clutter. The instructions don't require including everything; we should focus on experiences that demonstrate work.
+
+Thus, experiences list: 1-8 (excluding awards and patents as separate? Patents are listed under PATENTS section, they could be considered an experience. But I'll include patents as an experience because it's a discrete list. Actually, the patents are part of background. I'll include a single experience for patents.
+
+But the JSON expects each experience with index and title. Let's keep it manageable. For the sake of analysis, I'll include the main experiences from the EXPERIENCE section and the SELECTED PROJECTS as separate experiences (since they are described as projects). I'll also include the PATENTS as one experience.
+
+Thus, 9 experiences: Lead Systems Architect, Hardware R&D Engineer, Recording Systems Engineer, Product Development Consultant (Peavey), Keyboard Systems Integration, Eruption, Frankenstrat, 5150 Amplifier, Patents.
+
+Now, classification for all: ✅ Substantive (because they are real achievements, clearly described with active verbs, quantifiable where possible). But wait: the "Presumption of Guilt" might flag some as suspicious? For example, "Engineered Eruption solo in 1 minute 42 seconds" - is it realistic? For Eddie Van Halen, yes. But if we ignore real-world knowledge, can we doubt? The text is plausible and consistent. So no suspicion.
+
+However, the rule says "Treat every claim as 💧 or 🚩 by default when thinking". So we must initially doubt. But after reasoning, we can upgrade to ✅. For a musician resume, these are not watered-down; they are specific. So ✅.
+
+But relevance to CS is ❌ None for all.
+
+Now, majorMismatch: detected true, inferredTarget CS/AI, note: applicant has no formal CS education; major is piano training and self-taught guitar.
+
+TestScores: none.
+
+GPA: not applicable because major mismatch, set notApplicable true. Also no GPA given.
+
+Now, verdict: classification "Background Noise" because no relevant experience. Confidence: 0.05 (extremely low).
+
+InflationWarning: show false because content is accurate for its domain; no intentional inflation for CS.
+
+CrossDisciplinary: show false because none of the experiences use CS methods. The signal processing is analog, not digital. No programming.
+
+Strengths: maybe note the patents as evidence of innovation, but they are not CS. Possibly the "brown sound" could be seen as a form of optimization? But still not CS. I think strengths should be empty, or very cautious. The instructions allow strengths array but not required. I'll leave empty.
+
+Now, for each experience, we need to fill methods, capabilities, workChain, assetTags, interviewQuestions. Since relevance is none, interviewQuestions can be generic or about relevance. But we can still ask questions to probe if there is any hidden CS. For example, for "signal splitting architecture", we could ask if they used any DSP. But the text says analog splitting. So I'll set interviewQuestions to empty [] or note.
+
+But the structure expects an array of strings. For relevance ❌, I think we can omit or put a question asking about transferable skills. But to be thorough, I'll put one question per experience like "How could this experience be relevant to a data science program?" but that's generic. Better to follow the instruction: interviewQuestions are for probing technical depth. Since there is no CS depth, we can leave empty.
+
+But the schema doesn't require interviewQuestions; it's optional. I'll leave empty.
+
+Now, let's construct the JSON.
+
+First, THINKING block: I'll write step-by-step reasoning.
+
+I'll output the JSON after the thinking.
+
+// User-visible thinking //
+THINKING: The resume belongs to Eddie Van Halen, a famous guitarist and music engineer. He applies to "Computer Science, AI, Data Science" but has no formal CS education; his background is classical piano and self-taught guitar.  
+
+**Major Mismatch**: Clear – no CS degree, no programming, no math/stats coursework. GPA is notApplicable. Test scores absent.  
+
+**Experiences analysis** (9 entries):  
+1. **Lead Systems Architect & Principal Guitarist** – Active verbs, quantifiable (102-second solo), specific innovations (tapping, brown sound). For a musician, ✅ Substantive. Relevance to CS: ❌ None (no digital/algorithmic methods). Innovation: ⚙️ Engineering.  
+2. **Hardware R&D Engineer** – Built actual guitar (Frankenstrat), multiple patents. ✅ Substantive. Relevance ❌. Innovation: ⚙️ Engineering (physical design).  
+3. **Recording Systems Engineer** – Specific recording techniques, single-take performances. ✅ Substantive. Relevance ❌. Innovation: ⚙️ Engineering.  
+4. **Product Development Consultant (Peavey)** – Co-designed amplifier, created tonal architecture. ✅ Substantive. Relevance ❌. Innovation: ⚙️ Engineering.  
+5. **Keyboard Systems Integration** – Introduced synth to metal, #1 single. ✅ Substantive. Relevance ❌. Innovation: 🌟 Breakthrough (in music).  
+6. **Eruption (1978) Project** – Single-take solo, tapping, tremolo. ✅ Substantive. Relevance ❌. Innovation: 🌟 Breakthrough (guitar technique).  
+7. **Frankenstrat (1977) Project** – Built from parts, first Floyd Rose, Smithsonian display. ✅ Substantive. Relevance ❌. Innovation: 🌟 Breakthrough (guitar design).  
+8. **5150 Amplifier Series Project** – Designed amp, industry standard. ✅ Substantive. Relevance ❌. Innovation: ⚙️ Engineering.  
+9. **Patents & Intellectual Property** – Auto-✅ first-author/patent. Relevance ❌. Innovation: 🌟 Breakthrough (patented devices).  
+
+**Cross-Disciplinary**: None – no CS methods, tools, or frameworks used. All projects are pure music/guitar engineering.  
+
+**Inflation Warning**: Content is factually accurate for Eddie Van Halen’s career. No intentional inflation for CS. Show false.  
+
+**Veridct**: “Background Noise” – no relevant CS experience, zero probability of admission to competitive CS master’s. Confidence: 0.05.  
+
+**Strengths**: None relevant to CS (only music awards). Omitted.  
+
+**Interview Questions**: All experiences irrelevant, so leave empty.  
+
+Now output JSON.  
+
+```json
+-->
+
+
+
+
+
+
+<style>
+  * {
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Name</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Edward Van Halen</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Phone</strong></td><td style="padding: 10px; border: 1px solid #ddd;">(626) 555-0199</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Email</strong></td><td style="padding: 10px; border: 1px solid #ddd;">eddie@evhgear.com</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Undergraduate Institution</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Pasadena City College</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Major</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Classical Piano Training, Self-taught Guitarist</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>GPA (4.0 scale)</strong></td><td style="padding: 10px; border: 1px solid #ddd;">0.0 [🔘 Not Applicable]</td></tr>
+
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>🔎 Major Mismatch Detected</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Applicant has no formal CS education; background is music performance and self-taught guitar.</td></tr>
+
+
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>GRE</strong></td><td style="padding: 10px; border: 1px solid #ddd;"></td></tr>
+
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>TOEFL</strong></td><td style="padding: 10px; border: 1px solid #ddd;"></td></tr>
+
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Background Snapshot</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Musician and guitar hardware engineer; no CS coursework or projects.</td></tr>
+</table>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+
+<tr><td colspan="2" style="padding: 10px; border: 1px solid #ddd;">No significant non-experience strengths</td></tr>
+
+</table>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Classification</strong></td><td style="padding: 10px; border: 1px solid #ddd;">Background Noise</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Confidence</strong></td><td style="padding: 10px; border: 1px solid #ddd;">0.05</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Key Assets</strong></td><td style="padding: 10px; border: 1px solid #ddd;"></td></tr>
+</table>
+
+
+
+
+
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Cofounded hard rock band; served as primary songwriter for all major releases
+- Engineered "Eruption" solo in 1 minute 42 seconds, redefining electric guitar vocabulary and establishing new performance benchmark for the instrument
+- Pioneered two-handed finger-tapping technique, treating the guitar fretboard as a multi-touch input surface with 22 independent trigger points
+- Developed "brown sound" — a highly saturated overdriven timbre — through systematic amp modification and effects pedal array experimentation
+- Designed split-signal architecture: panned dry guitar signal to left channel, processed signal to right, creating immersive 3D audio field</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: ⚙️ Engineering<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Guitar performance, Signal splitting (analog), Amplifier modification</em><br><br>
+<strong>Work Chain</strong>: Cofounded band → pioneered tapping technique → engineered 102-second solo → developed overdriven timbre → designed split-signal panning<br>
+<strong>Asset Tags</strong>: guitar, performance, analog signal processing<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Designed and built "Frankenstein" guitar (1977) from factory-second parts; hybridized Fender Stratocaster playability with Gibson humbucker tonal characteristics
+- Installed PAF pickup salvaged from Gibson ES-335; potted in paraffin wax to reduce microphonic feedback
+- Prototyped first "Super Strat" guitar configuration, subsequently adopted as new industry standard
+- Patented support device facilitating finger tapping technique
+- Patented "D Tuna" device enabling rapid drop-tuning of lowest string by a whole step
+- Developed custom headstock design and stacked humbucking pickup configuration
+- Integrated Floyd Rose double-locking vibrato system for extreme pitch modulation</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: ⚙️ Engineering<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Guitar building, Pickup modification, Patenting</em><br><br>
+<strong>Work Chain</strong>: Designed Frankenstein guitar from parts → installed salvaged pickup with potting → prototyped Super Strat → filed patents for support device and D Tuna → integrated tremolo system<br>
+<strong>Asset Tags</strong>: guitar design, hardware, patents<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Engineered multi-track recording sessions without double-tracking guitars; each performance captured as single, nuanced take
+- Deployed dual Shure SM57 microphone configuration on single cabinet with variable signal delay
+- Implemented real-time signal splitting across multiple tube amplifiers and cabinets
+- Designed custom recording workflow prioritizing spontaneous performance over quantization</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: ⚙️ Engineering<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Recording engineering, Microphone placement, Signal splitting (analog)</em><br><br>
+<strong>Work Chain</strong>: Recorded single takes → used dual-mic setup with delay → split signal across amps → designed workflow for spontaneity<br>
+<strong>Asset Tags</strong>: audio engineering, recording<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Co-designed Peavey 5150 signature guitar amplifier; created new tonal architecture for hard rock and metal</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: ⚙️ Engineering<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Amplifier design, Tonal architecture creation</em><br><br>
+<strong>Work Chain</strong>: Co-designed amplifier with Peavey → developed high-gain tonal architecture → became industry standard<br>
+<strong>Asset Tags</strong>: amplifier, product development<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Introduced synthesizer into heavy metal; scored first #1 single "Jump" (1984) featuring keyboard melody</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: 🌟 Breakthrough<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Synthesizer integration, Music production</em><br><br>
+<strong>Work Chain</strong>: Introduced synthesizer into heavy metal → wrote #1 single with keyboard melody<br>
+<strong>Asset Tags</strong>: music innovation, synthesizer<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Single-take 102-second solo integrating tapping, tremolo dive-bombs, and harmonic overtones
+- Demonstrated feasibility of piano-style two-hand input on guitar interface
+- Recorded as spontaneous improvisation during album session; producer insisted on preservation</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: 🌟 Breakthrough<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Solo performance, Two-hand tapping, Improvisation</em><br><br>
+<strong>Work Chain</strong>: Improvised 102-second solo with tapping and tremolo → demonstrated two-hand input on guitar → captured spontaneously<br>
+<strong>Asset Tags</strong>: guitar solo, performance benchmark<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Built from $130 ash body and maple neck; combined Strat scale length with Gibson humbucker output
+- First guitar to feature Floyd Rose tremolo system; became blueprint for modern Super Strat
+- Displayed at Smithsonian National Museum of American History</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: 🌟 Breakthrough<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Guitar construction, Tremolo system integration</em><br><br>
+<strong>Work Chain</strong>: Built from cheap parts → combined Strat and Gibson features → first to use Floyd Rose → became Super Strat blueprint → displayed at Smithsonian<br>
+<strong>Asset Tags</strong>: guitar design, hardware innovation<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- Designed amplifier with extreme gain structure; became industry standard for hard rock
+- Second major tonal innovation following original "brown sound"</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: ⚙️ Engineering<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Amplifier design, Gain structure engineering</em><br><br>
+<strong>Work Chain</strong>: Designed high-gain amplifier → iterated on brown sound → became industry standard<br>
+<strong>Asset Tags</strong>: amplifier, tonal innovation<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- REASONING: Not available -->
+
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 45%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>- US Patent: Guitar support device for finger tapping facilitation
+- US Patent: "D Tuna" drop-tuning mechanism
+- US Patent: Stacked humbucking pickup and headstock design</td>
+<td style="width: 55%; padding: 10px; border: 1px solid #ddd;">
+<strong>✅ Substantive</strong><br>
+<strong>Relevance to Target Field</strong>: ❌ None<br>
+<strong>Innovation Level</strong>: 🌟 Breakthrough<br>
+<strong>Applied Knowledge & Methods</strong>: <em>No target-field methods applied</em><br>
+<strong>Reflected Capabilities</strong>: <em>Patent filing, Mechanical invention</em><br><br>
+<strong>Work Chain</strong>: Invented support device → invented D Tuna → invented stacked pickup and headstock → filed US patents<br>
+<strong>Asset Tags</strong>: patent, guitar device<br>
+<strong>Technical interview</strong>: 
+</td>
+</tr>
+</table>
+
+
+<!-- CV_NAME:Edward Van Halen -->
+<!-- CONFIDENCE:0.05 -->
