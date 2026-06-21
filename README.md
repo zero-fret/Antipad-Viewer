@@ -1,7 +1,7 @@
 # 💧 Antipad Viewer - CV Analysis Software
 Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences, generate technical interview questions and output HTML reports. 
 - Designed for admission officers and HR managers
-- **Enhance but DOES NOT REPLACE technical interview**
+- **Enhance but DOES NOT REPLACE technical interview and human judgement**
 
 ## Core Features:
 - Extract text from PDF/DOCX/TXT files
@@ -15,6 +15,8 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 - Does NOT support scanned image-based PDFs (no OCR)
 - Relies on strict LLM output formatting; parsing may fail if format is incorrect
 - Confidence score is the model's subjective judgment, not a hard admission prediction
+- Substansive experiences may be marked 💧 if the candidate describe it too vaguely, requiring human double-check
+- **DOES NOT REPLACE technical interview and human judgement**
 
 ### Output Example:
 ```
