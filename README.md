@@ -10,14 +10,19 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 - Output confidence score (0–1)
 - Generate clean, table-based HTML reports
 
-Known Limitations:
+### Known Limitations:
 - Does NOT verify facts (e.g., grades, whether papers are actually published)
 - Does NOT support scanned image-based PDFs (no OCR)
 - Relies on strict LLM output formatting; parsing may fail if format is incorrect
 - Confidence score is the model's subjective judgment, not a hard admission prediction
 
-Output Example (filename):
-0.72_Test_Candidate.html
+### Output Example:
+```
+0.05_Alan Water.html -- fabrication test
+0.05_Edward Van Halen.html -- absurdity test  
+0.75_Spidey (Yichi Zhang).html -- real candidate test
+0.85_Zero Fret.html -- real candidate test
+```
 
 ## Manual
 ### Dependencies:
