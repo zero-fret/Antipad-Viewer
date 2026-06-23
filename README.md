@@ -3,7 +3,7 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 - Designed for admission officers and HR managers
 - **Enhance but DOES NOT REPLACE technical interview and human judgement**
 
-*Applying to CS? Show me the code, not the water.*
+*Applying to CS? Show me the code, not the 💧.*
 
 ## Core Features:
 - Extract text from PDF/DOCX/TXT files
