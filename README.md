@@ -3,6 +3,8 @@ Analyze **resumes**, flag potentially **inflated** or **suspicious** experiences
 - Designed for admission officers and HR managers
 - **Enhance but DOES NOT REPLACE technical interview and human judgement**
 
+*Apply to CS? Show me the code.*
+
 ## Core Features:
 - Extract text from PDF/DOCX/TXT files
 - Call LLM to analyze each experience according to rules in prompt.txt
