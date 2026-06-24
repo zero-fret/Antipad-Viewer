@@ -41,18 +41,18 @@ pip install openai python-docx pymupdf
 
 ### Configuration:
 1. Place prompt.txt in the same directory as main.py
-2. Set environment variable API_KEY, or replace it inside main.py
+2. Set environment variable API_KEY, or store key in ./key.txt locally
 3. Optional: Modify MODEL / BASE_URL / THINKING_ENABLED
 
 ### Quick Start (single resume):
 python -c "from main import process_cv; process_cv('resume.pdf')"
 
 ### Batch processing:
-Place resumes into ./RESUME/ directory, then run:
+Place resumes into ./INPUT/ directory, then run:
 python main.py
 
 ### Output:
-./RESUME_ANTIPAD/<confidence>_<name>.html
+./OUTPUT/<confidence>_<name>.html
 
 License:
 GPL v3.0
