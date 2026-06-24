@@ -1,0 +1,110 @@
+{% set info = basicInfo %}
+{% set gpa = info.gpa %}
+{% set mm = info.majorMismatch %}
+{% set v = verdict %}
+{% set cd = crossDisciplinary %}
+
+<style>
+  * {
+    font-family: Arial, sans-serif;
+  }
+  details {
+    margin: 20px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  .reasoning-content {
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    line-height: 1.5;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+</style>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Name</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.name }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Phone</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.phone }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Email</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.email }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Undergraduate Institution</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.institution }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Major</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.major }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>GPA (4.0 scale)</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ gpa.value }}{% if gpa.notApplicable %} [🔘 Not Applicable]{% endif %}</td></tr>
+{% if mm.detected %}
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>🔎 Major Mismatch Detected</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ mm.note }}</td></tr>
+{% endif %}
+{% for k, val in info.testScores.items() %}
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>{{ k }}</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ val }}</td></tr>
+{% endfor %}
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Background Snapshot</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ info.background }}</td></tr>
+</table>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+{% if strengths %}
+{% for s in strengths %}
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>{{ s.item }}</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ s.detail }}</td></tr>
+{% endfor %}
+{% else %}
+<tr><td colspan="2" style="padding: 10px; border: 1px solid #ddd;">No significant non-experience strengths</td></tr>
+{% endif %}
+</table>
+
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f0f4f8;"><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 30%;">Item</th><th style="padding: 10px; border: 1px solid #ddd; text-align: left; width: 70%;">Content</th></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Classification</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ v.classification }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Confidence</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ "%.2f"|format(v.confidence) }}</td></tr>
+<tr><td style="padding: 10px; border: 1px solid #ddd;"><strong>Key Assets</strong></td><td style="padding: 10px; border: 1px solid #ddd;">{{ v.keyAssets|join(", ") }}</td></tr>
+</table>
+
+{% if v.inflationWarning.show %}
+<blockquote style="background:#ffcdcd;border-left:4px solid #ff6c6c;padding:15px;margin:20px 0;">🚩 <strong>Inflation Warning:</strong> {{ v.inflationWarning.reasons }}</blockquote>
+{% endif %}
+
+{% if cd.show %}
+<blockquote style="background: linear-gradient(135deg, #c5d0ff 0%, #d3a7ff 100%); color: white; padding: 20px 25px; margin: 25px 0; border-radius: 8px;">
+<h3 style="margin: 0 0 10px 0;">🌐 Cross-Disciplinary Potential Alert</h3>
+<p><strong>This candidate demonstrates strong cross-disciplinary potential.</strong> Despite major, their experiences show clear application of {{ cd.targetField }} methods to solve problems in {{ cd.domains|join(", ") }}. <strong>Recommend focusing on project contributions and methodological transferability</strong> rather than traditional GPA/major alignment.</p>
+<p style="margin-top:10px;"><strong>Transferable Methodologies Identified:</strong> {{ cd.methods|join(", ") }}</p>
+</blockquote>
+{% endif %}
+
+{% for exp in experiences %}
+<table style="width:100%; border: none; margin-bottom: 15px;">
+<tr style="vertical-align: top;">
+<td style="width: 30%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd;"><strong>📄 Original</strong><br><br>{{ exp.originalText | safe }}</td>
+<td style="width: 35%; padding: 10px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>🔍 Objective Description</strong><br><br>{{ exp.objectiveDescription if exp.objectiveDescription else "Not provided" }}</td>
+<td style="width: 35%; padding: 10px; border: 1px solid #ddd;">
+<strong>{{ exp.classification }}</strong><br>
+<strong>Relevance to Target Field</strong>: {{ exp.relevance }}<br>
+<strong>Innovation Level</strong>: {{ exp.innovation }}<br>
+<strong>Applied Knowledge & Methods</strong>: <em>{{ exp.methods|join(", ") if exp.methods else "No target-field methods applied" }}</em><br>
+<strong>Reflected Capabilities</strong>: <em>{{ exp.capabilities|join(", ") if exp.capabilities else "None" }}</em><br><br>
+<strong>Work Chain</strong>: {{ exp.workChain }}<br>
+<strong>Asset Tags</strong>: {{ exp.assetTags|join(", ") }}<br>
+<strong>Technical interview</strong>:<br>
+{% for q in exp.interviewQuestions %}
+&bull; {{ q }}<br>
+{% endfor %}
+</td>
+</tr>
+</table>
+{% endfor %}
+
+<!-- Display reasoning (if present) -->
+<details>
+  <summary>Click to expand reasoning</summary>
+  <div class="reasoning-content">{{ reasoning if reasoning else "No reasoning provided." }}</div>
+</details>
+
+<!-- CV_NAME:{{ basicInfo.name }} -->
+<!-- CONFIDENCE:{{ "%.2f"|format(v.confidence) }} -->
